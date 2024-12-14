@@ -1,4 +1,4 @@
-class Main {
+class Search {
     static int BinarySearch(int a[], int low, int high, int key)
     {
         while (low <= high) {
