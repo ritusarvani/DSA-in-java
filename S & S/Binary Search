@@ -1,0 +1,26 @@
+class Main {
+    static int BinarySearch(int a[], int low, int high, int key)
+    {
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (a[mid] == key) {
+                return mid;
+            } else if (a[mid] > key) {
+                high = mid - 1;
+            } else {
+              low = mid + 1;
+            }  
+        }
+        return -1;
+    }
+    public static void main(String args[])
+    {
+        int a[] = { 2, 3, 4, 10, 40 };
+        int n = a.length;
+        int result = BinarySearch(a, 0, n - 1, 10);
+        if (result == -1)
+            System.out.println("Element not present");
+        else
+            System.out.println("Element found at index " + result);
+    }
+}
